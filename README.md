@@ -10,8 +10,9 @@ Just change the logic after the websocket receive command after the while loop!
 # What do i need?
 1. Download the main.py file and the nodes.json file.
 2. Change address inside.
-3. ...
-4. Profit!
+3. Make sure you **pip install** the requirements.txt (or manually)
+4. ...
+5. Profit!
 
 # Requirements
 * Python libs:
