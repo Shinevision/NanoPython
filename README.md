@@ -13,6 +13,13 @@ Just change the logic after the websocket receive command after the while loop!
 3. ...
 4. Profit!
 
+# Requirements
+Python libs:
+  asyncio
+  ssl
+  websockets
+  json
+
 # Nodes?
 In the nodes.json file you will find some websocket nodes. You can add as many as you would like.
 It will automatically assign a random node on start.
