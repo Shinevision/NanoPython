@@ -7,6 +7,12 @@ The program will listen for RECEIVE payments.
 You can set it to listen to RECIEVE, SEND or even BOTH!
 Just change the logic after the websocket receive command after the while loop!
 
+# What do i need?
+1. Download the main.py file and the nodes.json file.
+2. Change address inside.
+3. ...
+4. Profit!
+
 # Nodes?
 In the nodes.json file you will find some websocket nodes. You can add as many as you would like.
 It will automatically assign a random node on start.
