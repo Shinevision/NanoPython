@@ -20,6 +20,7 @@ Just change the logic after the websocket receive command after the while loop!
   * ssl
   * websockets
   * json
+ 
  For full info. Look at the requirements.txt!
 
 # Nodes?
