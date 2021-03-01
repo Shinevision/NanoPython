@@ -32,6 +32,7 @@ Of course!
 just use the default NANO address!
 nano_3ij45i1uzaqwe8bdkbg4bfehdn4duzewao8m3z5grhda33hzzuzfo8a9zsws
 ![QR Code](https://raw.githubusercontent.com/Shinevision/NanoPython/main/Images/QR_NANO.png)
+
 **You can also use this to test if everything works :)**
 
 
