@@ -19,6 +19,7 @@ Just change the logic after the websocket receive command after the while loop!
   * ssl
   * websockets
   * json
+ For full info. Look at the requirements.txt!
 
 # Nodes?
 In the nodes.json file you will find some websocket nodes. You can add as many as you would like.
