@@ -46,7 +46,11 @@ async def main(): #Connect to websocket. Subscribe and listen for transactions.
             #PUT YOUR LOGIC HERE!!!!
 
             if "receive" in rec["message"]["block"]["subtype"]: #If its a donation (if type is receive). Print. usefull for Twitch bot integration.
-                print(f"GOT DONATION FROM {rec['message']['account']}\nAmount RAW: {rec['message']['amount']}\nAmount NANO: {raw_to_nano(rec['message']['amount'])}")
+            
+                confirmation = rec.get("topic", None) #Check if topic key exists. If not, make None.
+                if confirmation: #check if None.
+                    if confirmation == "confirmation": #Send NANO is legit and confirmed.
+                        print(f"GOT DONATION FROM {rec['message']['account']}\nAmount RAW: {rec['message']['amount']}\nAmount NANO: {raw_to_nano(rec['message']['amount'])}")
 
 try:
     assign_random_node() # Assign random socket node from file.
