@@ -1,7 +1,6 @@
 import asyncio
 import ssl
 import websockets
-import ssl
 import json
 import random
 
