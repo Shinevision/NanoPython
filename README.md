@@ -19,7 +19,7 @@ It will automatically assign a random node on start.
 
 # Can i donate?
 Of course!
-just use the default nana address!
+just use the default NANO address!
 nano_3ij45i1uzaqwe8bdkbg4bfehdn4duzewao8m3z5grhda33hzzuzfo8a9zsws
 ![QR Code](https://raw.githubusercontent.com/Shinevision/NanoPython/main/Images/QR_NANO.png)
 
