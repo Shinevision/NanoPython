@@ -45,7 +45,7 @@ async def main(): #Connect to websocket. Subscribe and listen for transactions.
 
             #PUT YOUR LOGIC HERE!!!!
 
-            if "receive" in rec["message"]["block"]["subtype"]: #If its a donation (if type is receive). Print. usefull for Twitch bot integration.
+            if "send" in rec["message"]["block"]["subtype"] and nanoAddress not in rec['message']['account']: #If its a donation (if type is send). Print. usefull for Twitch bot integration.
             
                 confirmation = rec.get("topic", None) #Check if topic key exists. If not, make None.
                 if confirmation: #check if None.
@@ -55,7 +55,7 @@ async def main(): #Connect to websocket. Subscribe and listen for transactions.
 try:
     assign_random_node() # Assign random socket node from file.
     asyncio.get_event_loop().run_until_complete(main()) #Run async websocket loop
-except KeyboardInterrupt: #if you CT
+except KeyboardInterrupt: #if you CTRL + C it quits.
     pass
 except ConnectionRefusedError: #If websocket is offline it will error. Put fallback logic here. For example remove node form nodes list and re-assign new node.
     print("ERROR connecting to websocket. websocket offline?")
