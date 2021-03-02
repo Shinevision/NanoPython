@@ -1,11 +1,14 @@
 # NanoPython
 Python to NANO network API using websockets.
 
-# Usage
+# Usage (Simple)
 Put in a address you want to monitor in the **nanoAddress** field.
 The program will listen for RECEIVE payments.
 You can set it to listen to RECIEVE, SEND or even BOTH!
 Just change the logic after the websocket receive command after the while loop!
+
+# Usage (Class based)
+To start just put your nano address in the Data.json file and run the main file.
 
 # What do i need?
 1. Download the main.py file and the nodes.json file.
@@ -35,6 +38,8 @@ nano_3ij45i1uzaqwe8bdkbg4bfehdn4duzewao8m3z5grhda33hzzuzfo8a9zsws
 
 **You can also use this to test if everything works :)**
 
+# Credits
+Class based script made by @azrael1221! Thanks a lot!
 
 # Questions?
 Feel free to ask for help!
