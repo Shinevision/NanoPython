@@ -3,6 +3,7 @@ import ssl
 import websockets
 import json
 import random
+import time
 from converter import Nanos
 
 ssl_context = ssl.create_default_context()  # Create SSL default cert. (websocket is TLS)
@@ -44,11 +45,15 @@ class Interpreter:
             self.subtype = self.message["message"]["block"]["subtype"]
         # checks for type of transaction
         if self.subtype == "send":
-            # sometimes there is also a send message when your account receives nanos with your account as the linked one, like this it only lists transfers from strange accounts
+            # checks if nanos are transfered to my account or a strange account
             if self.message['message']['block']['link_as_account'] != self.myaccount:
                 self.__onsend()
+            if self.message['message']['block']['link_as_account'] == self.myaccount:
+                self.__onreceive()
+        # if receive message is sent your account confirms that it received the nanos
+        # This is oply sent when locked at the account/wallet
         elif self.subtype == "receive":
-            self.__onreceive()
+            print("Confirmation! Nanos received!\n\n")
 
 
 class Connector:
@@ -113,5 +118,7 @@ def main(nanoAddress, ssl_context):  # function is needed for recursion
 
 with open("Data.json", "r") as file:
     data = json.load(file)
-
-main(data["nanoAddress"], ssl_context)
+if len(data["nanoAddress"]) == 65:
+    main(data["nanoAddress"], ssl_context)
+else:
+    main(input("The Nano Address in the json file is wrong, please input correct one:\n"), ssl_context)
