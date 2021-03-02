@@ -55,7 +55,7 @@ async def main(): #Connect to websocket. Subscribe and listen for transactions.
 try:
     assign_random_node() # Assign random socket node from file.
     asyncio.get_event_loop().run_until_complete(main()) #Run async websocket loop
-except KeyboardInterrupt: #if you CT
+except KeyboardInterrupt: #if you CTRL + C it quits.
     pass
 except ConnectionRefusedError: #If websocket is offline it will error. Put fallback logic here. For example remove node form nodes list and re-assign new node.
     print("ERROR connecting to websocket. websocket offline?")
