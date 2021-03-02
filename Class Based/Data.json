@@ -1,0 +1,7 @@
+{
+	"nodes": [
+		"wss://socket.nanos.cc",
+		"wss://ws.powernode.cc"
+	],
+	"nanoAddress": "nano_3ij45i1uzaqwe8bdkbg4bfehdn4duzewao8m3z5grhda33hzzuzfo8a9zsws"
+}
