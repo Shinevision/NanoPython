@@ -9,6 +9,7 @@ Just change the logic after the websocket receive command after the while loop!
 
 # Usage (Class based)
 To start just put your nano address in the Data.json file and run the main file.
+The script is structured using classes, getters and setters. If you like this method more use this script.
 
 # What do i need?
 1. Download the main.py file and the nodes.json file.
